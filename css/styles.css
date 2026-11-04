@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box; /* con border-box hacemos que los bordes y paddings se incluyan dentro del tamaño total de nuestro elemento */
+    margin: 0; /* eliminamos las margenes predeterminadas de los navegadores */
+    padding: 0; /* elimina los paddings predeterminado de los navegadores */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #010101;
+    display: flex; /* activamos el flexbox para organizar los elementos */
+    justify-content: center; /* centramos los elementos de forma horizontal */
+    align-items: center; /* centramos los elementos de forma vertical */
+    height: 100vh; /* hacemos que ocupe toda la altura de la pantalla */
+}
+
+.tarjeta {
+    background: rgb(255, 3, 3);
+    padding: 30px;
+    border-radius: 12px; /* redondeamos los bordes */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 450px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.caja-seleccion {
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%; /* designamos el ancho maximo del elemento */
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* redondeamos los bordes */
+    font-size: 14px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #bb0f0f;
+}
+
+/* Estilos base para el contenedor de resultados y sus diferentes estados */
+.contenedor-resultado {
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estado Vacío */
+.estado-vacio {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+/* Estado de Carga */
+.estado-cargando {
+    background-color: #000000;
+    color: #f6ff00;
+}
+
+/* Estado de Error */
+.estado-error {
+    background-color: #000000;
+    color: #f2041c;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estado Exitoso (Tarjeta del Repositorio) */
+.estado-exito {
+    background-color: #61ff0c;
+    border: 1px solid #ccc;
+    align-items: flex-start;
+    text-align: left;
+    padding: 15px;
+}
+
+.info-repo h3 {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.info-repo p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.detalles-repo {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Botón de Refresco */
+.btn-refrescar {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 8px; /* redondeamos los bordes */
+    font-size: 14px;
+    cursor: pointer; /* cambia el cursor a manito para indicar interactividad */
+    font-weight: bold;
+}
+
+.btn-refrescar:hover {
+    background-color: #333;
+}
+
+/* Clase utilitaria para ocultar elementos */
+.oculto {
+    display: none;
+}
